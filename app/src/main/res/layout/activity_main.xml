@@ -8,13 +8,13 @@
 
     <TextView
         android:id="@+id/firstname"
-        android:layout_width="143dp"
+        android:layout_width="144dp"
         android:layout_height="49dp"
         android:background="#00FFE1"
         android:text="Glory to"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
