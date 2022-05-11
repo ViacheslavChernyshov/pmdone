@@ -111,7 +111,6 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="100dp"
                 android:layout_weight="1"
-
                 android:text="Order price"
                 android:textAlignment="center" />
 
@@ -127,7 +126,8 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/MinusButton"
+            android:onClick="decreaseQuantity"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_alignEnd="@+id/CountTextView"
@@ -137,7 +137,8 @@
             android:text="-" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/PlusButton"
+            android:onClick="increaseQuantity"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_alignEnd="@+id/CountTextView"
@@ -149,7 +150,7 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/CartButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ADD TO CART" />
