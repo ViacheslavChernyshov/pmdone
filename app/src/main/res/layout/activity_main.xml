@@ -11,7 +11,7 @@
 
 
     <EditText
-        android:id="@+id/PersonNameeditText"
+        android:id="@+id/NameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -54,7 +54,7 @@
         android:textAlignment="textEnd" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/Spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
@@ -66,7 +66,7 @@
         android:layout_height="258dp">
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/goodImageView"
             android:layout_width="166dp"
             android:layout_height="134dp"
             android:layout_alignParentTop="true"
@@ -76,10 +76,10 @@
             app:srcCompat="@drawable/git" />
 
         <TextView
-            android:id="@+id/PricetextView"
+            android:id="@+id/PriceTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView4"
+            android:layout_below="@+id/goodImageView"
             android:layout_alignParentStart="true"
             android:layout_marginStart="109dp"
             android:layout_marginTop="61dp"
@@ -90,7 +90,7 @@
             android:id="@+id/CountTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView4"
+            android:layout_below="@+id/goodImageView"
             android:layout_alignParentStart="true"
             android:layout_marginStart="309dp"
             android:layout_marginTop="61dp"
@@ -100,7 +100,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView4"
+            android:layout_below="@+id/goodImageView"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
