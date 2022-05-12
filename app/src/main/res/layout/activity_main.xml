@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:hint="Your name"/>
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -60,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginStart="30dp">
+            android:layout_marginStart="20dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -93,7 +92,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="120dp"
+            android:layout_marginStart="100dp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
@@ -108,37 +107,41 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp">
+
                 <Button
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:onClick="decreaseQuantity"
                     android:text="-"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
                 <TextView
+                    android:id="@+id/quantityTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:text="0"
-                    android:textStyle="bold"
                     android:textColor="@color/black"
-                    android:textSize="17sp"/>
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
                 <Button
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:onClick="increaseQuantity"
                     android:text="+"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:background="#ED1414"
         android:text="ADD TO CART"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
 </LinearLayout>
