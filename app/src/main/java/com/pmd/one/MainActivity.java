@@ -2,10 +2,13 @@ package com.pmd.one;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -23,11 +26,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     HashMap goodsMap;
     String goodsName;
     double price;
+    EditText userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        userName = findViewById(R.id.NameEditText);
 
         createSpinner();
         createMap();
@@ -100,5 +106,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    public void addToCart(View view) {
+        Order order = new Order();
+
+        order.userName = userName.getText().toString();
+        Log.d("printUser", order.userName);
+
+        order.goodName = goodsName;
+        order.quantity = quantity;
+        order.orderPrice = quantity * price;
+
+        Intent orderIntent = new Intent(MainActivity.this, OrderActivity.class);
+        orderIntent.putExtra("userName", order.userName);
+        orderIntent.putExtra("goodName", order.goodName);
+        orderIntent.putExtra("quantity", order.quantity);
+        orderIntent.putExtra("Price", order.orderPrice);
+
+        startActivity(orderIntent);
     }
 }
