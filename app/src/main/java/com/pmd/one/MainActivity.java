@@ -2,11 +2,13 @@ package com.pmd.one;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     TextView quantityTextView;
     ImageView goodsImageView;
     Spinner spinner;
+    EditText userNameEditText;
     ArrayList spinnerArrayList = new ArrayList();
     ArrayAdapter spinnerAdapter;
 
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        userNameEditText = findViewById(R.id.nameEditText);
         spinner = findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener(this);
         spinnerArrayList.add("guitar black");
@@ -89,5 +93,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+    public void addToCard(View view) {
+        Order order = new Order(userNameEditText.getText().toString(),
+                goodsName,
+                quantity,
+                price,
+                quantity * price);
+        Intent orderIntent = new Intent(MainActivity.this, OrderActivity.class);
+        orderIntent.putExtra(Order.class.getSimpleName(), order);
+        startActivity(orderIntent);
     }
 }
