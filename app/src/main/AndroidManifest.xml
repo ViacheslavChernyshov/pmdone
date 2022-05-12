@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pmdone">
         <activity
+            android:name=".Audio"
+            android:exported="false" />
+        <activity
+            android:name=".Video"
+            android:exported="false" />
+        <activity
+            android:name=".Market"
+            android:exported="false" />
+        <activity
+            android:name=".Animation"
+            android:exported="false" />
+        <activity
             android:name=".OrderActivity"
             android:exported="false" />
         <activity
