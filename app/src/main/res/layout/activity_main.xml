@@ -6,38 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/humanOneImageView"
-        android:onClick="goAnimation"
+    <VideoView
+        android:id="@+id/videoView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/one" />
-
-    <ImageView
-        android:id="@+id/humanTwoImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="goAnimation"
-        android:alpha="0"
-        android:scaleX="0"
-        android:scaleY="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/two" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Нажми на меня"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/humanOneImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

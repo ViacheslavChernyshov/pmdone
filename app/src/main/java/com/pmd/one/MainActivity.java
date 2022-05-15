@@ -2,8 +2,8 @@ package com.pmd.one;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,23 +13,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
-    public void goAnimation(View view) {
-        ImageView humanOneImageView = findViewById(R.id.humanOneImageView);
-        ImageView humanTwoImageView = findViewById(R.id.humanTwoImageView);
-        if (checked) {
-            humanOneImageView.animate().alpha(0).rotation(humanOneImageView.getRotation() - 3600)
-                    .scaleX(0).scaleY(0).setDuration(3000);
-            humanTwoImageView.animate().alpha(1).rotation(humanTwoImageView.getRotation() -3600)
-                    .scaleX(1).scaleY(1).setDuration(3000);
-            checked = false;
-        } else {
-            humanOneImageView.animate().alpha(1).rotation(humanOneImageView.getRotation() - 3600)
-                    .scaleX(1).scaleY(1).setDuration(3000);
-            humanTwoImageView.animate().alpha(0).rotation(humanTwoImageView.getRotation() - 3600)
-                    .scaleX(0).scaleY(0).setDuration(3000);
-            checked = true;
-        }
+        VideoView videoView = findViewById(R.id.videoView);
+        videoView.setVideoPath("android.resource://" + getPackageName() +
+                "/" + R.raw.demo);
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(videoView);
+        videoView.setMediaController(mediaController);
+        videoView.start();
     }
 }
