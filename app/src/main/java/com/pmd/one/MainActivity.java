@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.SeekBar;
 
 public class MainActivity extends AppCompatActivity {
-
     MediaPlayer mediaPlayer;
     Button playPauseButton;
     SeekBar volumeSeekBar;
