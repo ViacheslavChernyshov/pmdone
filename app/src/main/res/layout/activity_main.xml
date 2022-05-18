@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="8dp"
-    tools:context=".MainActivity">
+    android:layout_margin="0dp"
+    tools:context=".MainActivity"
+    android:background="@color/purple_200">
 
     <EditText
         android:layout_width="match_parent"
@@ -21,35 +22,38 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/sale" />
+            android:src="@drawable/fon2" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:rotation="-27"
-            android:text="Sale -30%"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:fontFamily="sans-serif-black"
+            android:rotation="+30"
+            android:text="Sale +30%"
+            android:textColor="#FFF300"
+            android:textSize="24sp"
+            android:textStyle="bold" />
     </RelativeLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Item"
-        android:textStyle="bold"
-        android:layout_marginEnd="20dp"
-        android:layout_gravity="end"
-        android:textSize="16sp"
+        android:layout_gravity="center"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"/>
+        android:layout_marginEnd="20dp"
+        android:text="select Item"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/guitar"
+        android:src="@drawable/gitara"
         android:layout_gravity="center"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -131,13 +135,11 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:background="#ED1414"
-        android:text="ADD TO CART"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
+        android:text="Add to cart"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
 </LinearLayout>
