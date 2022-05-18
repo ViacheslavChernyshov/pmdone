@@ -1,74 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background = "#E4A3A3"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toLeftOf="@+id/block_text"
+        android:padding="5dp"
+        app:srcCompat="@drawable/yeremenko"
+        tools:layout_editor_absoluteX="69dp" />
 
     <LinearLayout
+        android:id="@+id/block_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_margin="5dp"
-            android:padding="5dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.506"
-            app:srcCompat="@drawable/yeremenko"
-            tools:layout_editor_absoluteX="69dp" />
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="14dp"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="40dp"
-            android:text="Hi, anyone"
-            android:textColor="#00F7FF"
-            android:textSize="34sp"
+            android:text="что это такое"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_margin="5dp"
-            android:padding="5dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.506"
-            app:srcCompat="@drawable/yeremenko"
-            tools:layout_editor_absoluteX="69dp" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
-            android:text="Yeremenko Victor"
-            android:textColor="#FFDD00"
-            android:textSize="34sp"
+            android:text="если бы мы знали что это такое"
+            android:textColor="#0083F4"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="но мы не знаем что это такое"
+            android:textColor="#FFE600"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
-</LinearLayout>
+
+</RelativeLayout>
