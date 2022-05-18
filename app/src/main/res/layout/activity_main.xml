@@ -10,9 +10,10 @@
     android:background="@color/purple_200">
 
     <EditText
+        android:id="@+id/UserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Your name"/>
+        android:hint="Your name" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -149,6 +150,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="Add to cart"
+        android:onClick="addToCard"
         android:textStyle="bold"
         android:textColor="@color/black"/>
 </LinearLayout>

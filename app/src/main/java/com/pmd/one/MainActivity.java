@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.ImageView;
 import java.util.ArrayList;
 import java.util.HashMap;
+import android.content.Intent;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     int quantity = 0;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     Spinner spinner;
     ArrayList spinnerArrayList = new ArrayList();
     ArrayAdapter spinnerAdapter;
+    EditText UserName_EditText;
 
     HashMap goodsMap;
     String goodsName;
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         quantityTextView = findViewById(R.id.TextViewQua);
         pricetext = findViewById(R.id.Price);
         goodsImageView = findViewById(R.id.TovarImage);
+        UserName_EditText = findViewById(R.id.UserName);
 
         spinner = findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener(this);
@@ -88,6 +91,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
-
+    }
+    public void addToCard(View view) {
+        Order order = new Order(UserName_EditText.getText().toString(),
+                goodsName,
+                quantity,
+                price,
+                quantity * price);
+        Intent orderIntent = new Intent(MainActivity.this, Order_Activity.class);
+        orderIntent.putExtra(Order.class.getSimpleName(), order);
+        startActivity(orderIntent);
     }
 }
