@@ -112,21 +112,25 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp">
                 <Button
+                    android:onClick="decreaseQuantity"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:text="-"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
+
                 <TextView
+                    android:id="@+id/TextViewQua"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:text="0"
-                    android:textStyle="bold"
                     android:textColor="@color/black"
-                    android:textSize="17sp"/>
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
                 <Button
+                    android:onClick="increaseQuantity"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:text="+"
