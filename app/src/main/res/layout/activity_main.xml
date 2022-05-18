@@ -48,13 +48,16 @@
         android:textStyle="bold" />
 
     <Spinner
+        android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <ImageView
+        android:id="@+id/TovarImage"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/gitara"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:src="@drawable/error" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,14 +78,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
+
                 <TextView
+                    android:id="@+id/Price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:text="0"
                     android:textColor="@color/black"
                     android:textSize="17sp"
-                    android:layout_marginTop="15dp"
-                    android:text="0"/>
+                    android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
