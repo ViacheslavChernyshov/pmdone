@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="8dp"
-    tools:context=".MainActivity">
+    android:layout_margin="0dp"
+    tools:context=".MainActivity"
+    android:background="@color/purple_200">
 
     <EditText
+        android:id="@+id/UserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"/>
+        android:hint="name" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,32 +23,36 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/gshop" />
+            android:src="@drawable/fon2" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:fontFamily="sans-serif-black"
             android:rotation="0"
-            android:text="Sale +100%"
-            android:textColor="#D104F4"
+            android:text="Sale +100"
+            android:textColor="#FFF300"
             android:textSize="24sp"
             android:textStyle="bold" />
     </RelativeLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Item"
-        android:textStyle="bold"
-        android:layout_marginEnd="20dp"
-        android:layout_gravity="end"
-        android:textSize="16sp"
+        android:layout_gravity="center"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"/>
+        android:layout_marginEnd="20dp"
+        android:text="select Item"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <ImageView
         android:id="@+id/TovarImage"
         android:layout_width="100dp"
@@ -63,8 +69,6 @@
             android:orientation="vertical"
             android:layout_marginStart="30dp">
             <TextView
-
-                android:id="@+id/Price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
@@ -75,14 +79,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
+
                 <TextView
+                    android:id="@+id/Price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:text="0"
                     android:textColor="@color/black"
                     android:textSize="17sp"
-                    android:layout_marginTop="15dp"
-                    android:text="0"/>
+                    android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -117,7 +123,8 @@
                     android:layout_height="50dp"
                     android:text="<"
                     android:textStyle="bold"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"/>
+
                 <TextView
                     android:id="@+id/TextViewQua"
                     android:layout_width="wrap_content"
@@ -134,17 +141,16 @@
                     android:layout_height="50dp"
                     android:text=">"
                     android:textStyle="bold"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:background="#ED1414"
-        android:text="Buy"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
+        android:text="Add to cart"
+        android:onClick="addToCard"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
 </LinearLayout>
