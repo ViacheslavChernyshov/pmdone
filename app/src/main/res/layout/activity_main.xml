@@ -11,7 +11,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Your name"/>
+        android:hint="Name"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,22 +21,22 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/sale" />
+            android:src="@drawable/gshop" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:rotation="-27"
-            android:text="Sale -30%"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:rotation="0"
+            android:text="Sale +100%"
+            android:textColor="#D104F4"
+            android:textSize="24sp"
+            android:textStyle="bold" />
     </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Item"
+        android:text="Item"
         android:textStyle="bold"
         android:layout_marginEnd="20dp"
         android:layout_gravity="end"
@@ -66,7 +66,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="17sp"
-                android:text="Order Price"/>
+                android:text="Price"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -110,9 +110,9 @@
                 <Button
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:text="-"
+                    android:text="<"
                     android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/white"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -125,9 +125,9 @@
                 <Button
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:text="+"
+                    android:text=">"
                     android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/white"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -137,7 +137,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:background="#ED1414"
-        android:text="ADD TO CART"
-        android:textColor="@color/black"
+        android:text="Buy"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 </LinearLayout>
