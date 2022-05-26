@@ -44,13 +44,15 @@
         android:layout_marginTop="5dp"
         android:textColor="@color/black"/>
     <Spinner
+        android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <ImageView
+        android:id="@+id/TovarImage"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/guitar"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:src="@drawable/error" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,6 +63,8 @@
             android:orientation="vertical"
             android:layout_marginStart="30dp">
             <TextView
+
+                android:id="@+id/Price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
